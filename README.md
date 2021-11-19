@@ -1,2 +1,2 @@
-# Super-Secret-Settings
-A Fabric Minecraft Mod which adds a feature removed in MC version 1.9!
+# Super Secret Settings Fabric
+This is the source code for a FabricMC Mod which adds the "Super Secret Settings..." setting that was removed in the 1.9 update. 
