@@ -4,9 +4,9 @@
   "package": "fooxy.sss.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "OptionsScreenMixin"
   ],
   "client": [
+    "OptionsScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
