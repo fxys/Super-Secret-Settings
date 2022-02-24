@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "fooxy.sss.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "OptionsScreenMixin",
+    "GameRendererMixin",
+    "WindowMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
