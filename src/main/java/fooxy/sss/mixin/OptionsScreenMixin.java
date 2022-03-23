@@ -39,7 +39,7 @@ public abstract class OptionsScreenMixin extends Screen {
         if (Screen.hasShiftDown())
             client.setScreen(new SuperSecretSettingsScreen(this));
         else {
-            SoundEvent se = Registry.SOUND_EVENT.getRandom(new Random());
+            
             assert se != null;
             if (!se.getId().toString().contains("music")) {
                 client.getSoundManager().stopSounds(SoundEvents.UI_BUTTON_CLICK.getId(), SoundCategory.MASTER);
