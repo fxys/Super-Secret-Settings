@@ -39,11 +39,12 @@ public abstract class OptionsScreenMixin extends Screen {
         if (Screen.hasShiftDown())
             client.setScreen(new SuperSecretSettingsScreen(this));
         else {
-            
+            Object[] ids = Registry.SOUND_EVENT.getIds().toArray();
+            Identifier se = (Identifier) ids[new Random().nextInt(ids.length)];
             assert se != null;
-            if (!se.getId().toString().contains("music")) {
+            if (!se.toString().contains("music")) {
                 client.getSoundManager().stopSounds(SoundEvents.UI_BUTTON_CLICK.getId(), SoundCategory.MASTER);
-                client.getSoundManager().play(PositionedSoundInstance.master(se, 1.0f));
+                client.getSoundManager().play(PositionedSoundInstance.master(new SoundEvent(se), 1.0f));
             }
             if (client != null && client.getCameraEntity() != null)
                 ShaderUtils.load(true);
