@@ -1,7 +1,6 @@
 package fooxy.sss.gui;
 
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 
 import java.util.Arrays;
@@ -61,7 +60,7 @@ public enum ShaderList {
     }
 
     public Text getName() {
-        return new TranslatableText("fooxy.sss.shader." + this.name);
+        return Text.translatable("fooxy.sss.shader." + this.name);
     }
 
     public int getId() {
