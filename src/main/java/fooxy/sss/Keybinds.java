@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 
 public class Keybinds implements ModInitializer {
 
@@ -21,7 +21,7 @@ public class Keybinds implements ModInitializer {
                     ShaderUtils.enabled ^= true;
                     if (ShaderUtils.shader != null)
                         ShaderUtils.shader.setupDimensions(client.getWindow().getFramebufferWidth(), client.getWindow().getFramebufferHeight());
-                    client.player.sendMessage(new TranslatableText("fooxy.sss.button." + ShaderUtils.enabled), true);
+                    client.player.sendMessage(Text.translatable("fooxy.sss.button." + ShaderUtils.enabled), true);
                 } else if (nextKey.wasPressed())
                     ShaderUtils.load(true);
                 else if (prevKey.wasPressed())
