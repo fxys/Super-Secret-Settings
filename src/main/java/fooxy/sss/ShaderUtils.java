@@ -29,8 +29,7 @@ public class ShaderUtils {
     }
 
     public static void load(boolean d) {
-        if(shader != null)
-            shader.close();
+        if(shader != null) shader.close();
         shader = getCurrent(d);
         if(shader != null) {
             shader.setupDimensions(client.getWindow().getFramebufferWidth(), client.getWindow().getFramebufferHeight());
